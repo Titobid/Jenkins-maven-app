@@ -1,4 +1,4 @@
-library identifier: 'jenkins-shared-library@main', retriever: modernSCMC(
+library identifier: 'jenkins-shared-library@main', retriever: modernSCM(
         [$class:'GitSCMSource',
          remote: 'https://github.com/Titobid/Jenkins-shared-library.git',
          credentialsID: 'github-cred'])
