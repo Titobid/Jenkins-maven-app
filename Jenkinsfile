@@ -22,10 +22,12 @@ pipeline {
             }
         }
 
-        stage("build image") {
+        stage("build and push image") {
             steps {
                 script {
-                    buildImage 'titobid/jenkins-app:1.0'
+                    buildImage 'titobid/jenkins-app:2.0'
+                    dockerLogin()
+                    dockerPush 'titobid/jenkins-app:2.0'
                 }
             }
         }
